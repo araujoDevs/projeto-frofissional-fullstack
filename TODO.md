@@ -7,3 +7,7 @@
 - [x] Editar src/App.js: Substituir <Input> por <input> com classes Tailwind
 - [x] Editar src/App.js: Substituir <Tabs>, <TabsList>, <TabsTrigger>, <TabsContent> por divs e botões com estado usando Tailwind
 - [x] Executar npm start para testar o app localmente e verificar se funciona sem erros
+- [x] Configurar Tailwind CSS corretamente (instalar versão compatível e configurar PostCSS)
+- [x] Commitar mudanças no Git
+- [ ] Criar repositório no GitHub e fazer push
+- [ ] Criar pull request
