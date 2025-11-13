@@ -12,7 +12,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 // Configuração da API
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:7000/api';
 
 // 🧩 Etapa 1: Estrutura principal do sistema
 // Criamos o componente principal que conterá três seções: Dashboard, Doações e Voluntários.
