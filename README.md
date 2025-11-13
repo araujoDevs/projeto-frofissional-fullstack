@@ -1,70 +1,193 @@
-# Getting Started with Create React App
+# Sistema de Doações - Lar de Idosos Francisco de Assis
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma aplicação fullstack moderna para gerenciamento de doações e voluntários do Lar de Idosos Francisco de Assis, desenvolvida como projeto extensionista do curso de Análise e Desenvolvimento de Sistemas.
 
-## Available Scripts
+## 🚀 Tecnologias Utilizadas
 
-In the project directory, you can run:
+### Frontend
+- **React 19** - Framework JavaScript para interfaces de usuário
+- **Tailwind CSS** - Framework CSS utilitário para estilização
+- **Framer Motion** - Biblioteca de animações para React
+- **React Hook Form** - Gerenciamento de formulários com validação
+- **Heroicons** - Ícones SVG otimizados
+- **Axios** - Cliente HTTP para requisições API
 
-### `npm start`
+### Backend
+- **Node.js** - Runtime JavaScript
+- **Express.js** - Framework web para Node.js
+- **MongoDB** - Banco de dados NoSQL
+- **Mongoose** - ODM para MongoDB
+- **CORS** - Middleware para compartilhamento de recursos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📋 Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Dashboard
+- 📊 Visualização de estatísticas gerais
+- 📈 Contadores de doações e voluntários
+- 🎨 Interface moderna e responsiva
 
-### `npm test`
+### Gerenciamento de Doações
+- ➕ Cadastro de novas doações
+- ✏️ Edição de doações existentes
+- 🗑️ Exclusão de doações
+- 🔍 Busca em tempo real
+- 📱 Interface responsiva
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Gerenciamento de Voluntários
+- ➕ Cadastro de novos voluntários
+- ✏️ Edição de voluntários existentes
+- 🗑️ Exclusão de voluntários
+- 🔍 Busca em tempo real
+- 📱 Interface responsiva
 
-### `npm run build`
+## 🛠️ Instalação e Configuração
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pré-requisitos
+- Node.js (versão 14 ou superior)
+- npm ou yarn
+- MongoDB (local ou Atlas)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone o repositório
+```bash
+git clone https://github.com/seu-usuario/sistema-doacoes.git
+cd sistema-doacoes
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Instale as dependências do frontend
+```bash
+npm install
+```
 
-### `npm run eject`
+### 3. Configure o backend
+```bash
+cd server
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Configure as variáveis de ambiente
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Backend (.env no diretório server/)
+```env
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/sistema-doacoes
+NODE_ENV=development
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Frontend (.env na raiz do projeto)
+```env
+REACT_APP_API_URL=http://localhost:5000/api
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 5. Inicie o MongoDB
+Certifique-se de que o MongoDB está rodando localmente ou configure a conexão com MongoDB Atlas.
 
-## Learn More
+### 6. Execute a aplicação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Terminal 1 - Backend
+```bash
+cd server
+npm start
+# ou para desenvolvimento com nodemon
+npm run dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Terminal 2 - Frontend
+```bash
+npm start
+```
 
-### Code Splitting
+A aplicação estará disponível em:
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:5000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📡 API Endpoints
 
-### Analyzing the Bundle Size
+### Doações
+- `GET /api/doacoes` - Listar todas as doações
+- `POST /api/doacoes` - Criar nova doação
+- `PUT /api/doacoes/:id` - Atualizar doação
+- `DELETE /api/doacoes/:id` - Deletar doação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Voluntários
+- `GET /api/voluntarios` - Listar todos os voluntários
+- `POST /api/voluntarios` - Criar novo voluntário
+- `PUT /api/voluntarios/:id` - Atualizar voluntário
+- `DELETE /api/voluntarios/:id` - Deletar voluntário
 
-### Making a Progressive Web App
+## 🎨 Design System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Cores Principais
+- **Azul**: #3B82F6 (ações de doações)
+- **Verde**: #10B981 (ações de voluntários)
+- **Roxo**: #8B5CF6 (dashboard)
+- **Cinza**: #6B7280 (textos e elementos neutros)
 
-### Advanced Configuration
+### Componentes
+- **Botões**: Bordas arredondadas, hover effects, estados de loading
+- **Inputs**: Foco com ring, validação visual
+- **Cards**: Sombras suaves, transições
+- **Ícones**: Heroicons para consistência visual
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📱 Responsividade
 
-### Deployment
+A aplicação é totalmente responsiva e otimizada para:
+- 📱 Dispositivos móveis
+- 📟 Tablets
+- 💻 Desktops
+- 🖥️ Telas grandes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🔧 Scripts Disponíveis
 
-### `npm run build` fails to minify
+### Frontend
+```bash
+npm start          # Inicia o servidor de desenvolvimento
+npm run build      # Cria build de produção
+npm test           # Executa testes
+npm run eject      # Remove ferramentas de build (irreversível)
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Backend
+```bash
+npm start          # Inicia o servidor
+npm run dev        # Inicia com nodemon (desenvolvimento)
+```
+
+## 🚀 Deploy
+
+### Frontend (Vercel/Netlify)
+1. Execute `npm run build`
+2. Faça upload da pasta `build` para sua plataforma de hospedagem
+3. Configure as variáveis de ambiente
+
+### Backend (Heroku/Render)
+1. Configure o banco MongoDB Atlas
+2. Faça deploy do código do backend
+3. Configure as variáveis de ambiente no serviço de hospedagem
+
+## 🤝 Contribuição
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## 👥 Equipe
+
+- **Desenvolvimento**: [Seu Nome]
+- **Orientação**: Professor [Nome do Professor]
+- **Instituição**: [Nome da Instituição]
+
+## 🙏 Agradecimentos
+
+- Lar de Idosos Francisco de Assis pela oportunidade
+- Professores e colegas do curso de Análise e Desenvolvimento de Sistemas
+- Comunidade open source pelas ferramentas utilizadas
+
+---
+
+**Status do Projeto**: ✅ Concluído e pronto para uso profissional
